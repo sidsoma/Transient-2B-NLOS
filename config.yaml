@@ -1,0 +1,19 @@
+
+# === Data parameters === #
+data_path: './delta_cube_test.mat'
+spatial_ds: 4 # spatial downsample factor
+r3_calib: True # if camera-detector distance is calibrated
+
+# === Bounds of voxel grid and voxel size === #
+spacing: 0.02
+x_lims: [-0.5, 0.5]
+y_lims: [-0.5, 0.5]
+z_lims: [1, 2]
+
+# === Optimization parameters === #
+device: 'mps' # set to be cpu, gpu, or mps (if using Apple Silicon)
+num_batches: 300 # choose to be as small as possible while still 
+                  # fitting in GPU/CPU memory 
+
+# === Output parameters === #
+save_dir: './nlos_letters'
